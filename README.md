@@ -39,6 +39,24 @@ Para revisar los registros del servidor:
 docker compose logs -f portfolio
 ```
 
+## Publicación en Vercel
+
+El proyecto genera un sitio estático en `dist/` y está preparado para Vercel mediante [`vercel.json`](vercel.json).
+
+1. Crea una cuenta en [Vercel](https://vercel.com) e inicia sesión con GitHub.
+2. Pulsa **Add New → Project** y selecciona el repositorio `about_me`.
+3. Mantén la configuración detectada por Vercel y pulsa **Deploy**.
+
+Vercel ejecutará `npm run build`, publicará `dist/` y entregará una URL pública gratuita con dominio `vercel.app`. Cada push a la rama seleccionada podrá generar un nuevo despliegue automáticamente.
+
+También puedes generar los archivos estáticos localmente con Docker:
+
+```bash
+docker compose run --rm portfolio npm run build
+```
+
+El resultado queda en `dist/`. No es necesario subir `dist/` al repositorio: Vercel lo genera durante el despliegue.
+
 ## Desarrollo local
 
 Necesitas Node.js 18.17 o superior.
