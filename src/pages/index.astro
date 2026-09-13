@@ -1,0 +1,143 @@
+---
+import portfolio from '../data/portfolio.json';
+import '../styles/global.css';
+
+const { person, skills, experience, projects, education, certifications } = portfolio;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={`${person.shortName} — ${person.role}`} />
+    <title>{person.shortName} · Portfolio</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="#inicio">CC<span>.</span></a>
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container hero" id="inicio">
+        <div>
+          <p class="eyebrow">{person.availability}</p>
+          <h1>Construyo cosas <em>que importan.</em></h1>
+          <p class="hero-intro">{person.bio}</p>
+          <div class="hero-actions">
+            <a class="button primary" href={`mailto:${person.email}`}>Hablemos <span>↗</span></a>
+            <a class="button" href={person.social.github} target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+          </div>
+        </div>
+        <aside class="hero-note">
+          <img class="profile-photo" src={person.avatarUrl} alt={`Foto de perfil de ${person.name}`} width="160" height="160" />
+          <strong>{person.role}</strong>
+          <span>{person.location}</span>
+        </aside>
+      </section>
+
+      <section class="section" id="sobre-mi">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Sobre mí</h2>
+            <p>Un perfil técnico con curiosidad por el producto, el código y las personas.</p>
+          </div>
+          <div class="about-grid">
+            <div class="about-copy"><p>{person.longBio}</p></div>
+            <div class="about-detail">
+              <p>{education}</p>
+              <div class="skill-grid">
+                {skills.map((group) => (
+                  <div class="skill-group">
+                    <h3>{group.label}</h3>
+                    <p>{group.items.join(' · ')}</p>
+                  </div>
+                ))}
+              </div>
+              <div class="skill-group certifications">
+                <h3>Certificaciones</h3>
+                <p>{certifications.join(' · ')}</p>
+              </div>
+              <div class="ai-note">
+                <span class="eyebrow">Forma de trabajo</span>
+                <h3>IA aplicada al desarrollo</h3>
+                <p>{person.aiPractice}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experiencia">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Experiencia</h2>
+            <p>Aprendizajes acumulados construyendo y manteniendo software real.</p>
+          </div>
+          <div class="experience-list">
+            {experience.map((item) => (
+              <article class="experience-item">
+                <p class="experience-period mono">{item.period}</p>
+                <div>
+                  <h3>{item.role}</h3>
+                  <p class="company">{item.company}</p>
+                  <p>{item.description}</p>
+                  <div class="tags">
+                    {item.tags.map((tag) => <span class="tag">{tag}</span>)}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="proyectos">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Proyectos</h2>
+            <p>Una selección de problemas, herramientas y decisiones técnicas.</p>
+          </div>
+          <div class="project-grid">
+            {projects.map((project) => (
+              <article class="project-card">
+                <div>
+                  <span class="project-number mono">{project.number}</span>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                </div>
+                <a class="project-link" href={project.link} target="_blank" rel="noreferrer">
+                  <span>{project.stack.join(' · ')}</span><span>↗</span>
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="container contact" id="contacto">
+        <div>
+          <p class="eyebrow">¿Tienes una idea?</p>
+          <h2>Hagámosla realidad.</h2>
+        </div>
+        <div class="contact-info">
+          <p>Estoy abierto a conversar sobre productos digitales, equipos y oportunidades donde pueda aportar valor.</p>
+          <a href={`mailto:${person.email}`}>{person.email}</a>
+          <a href={person.social.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container site-footer">
+      <span>{person.shortName}</span>
+      <span class="mono">Hecho con Astro · {new Date().getFullYear()}</span>
+    </footer>
+  </body>
+</html>

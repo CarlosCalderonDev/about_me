@@ -1,0 +1,73 @@
+{
+  "person": {
+    "name": "Carlos Alberto Calderón Barrios",
+    "shortName": "Carlos Calderón",
+    "role": "Ingeniero de Sistemas · Desarrollador Web",
+    "location": "Cali, Valle del Cauca, Colombia",
+    "avatarUrl": "https://github.com/CarlosCalderonDev.png?size=512",
+    "email": "Carlos.Calderon01@Outlook.com",
+    "phone": "+57 316 399 6826",
+    "availability": "Disponible para nuevos desafíos",
+    "bio": "Desarrollador web enfocado en construir productos robustos, mantenibles y fáciles de evolucionar. Trabajo entre el backend y el frontend, combinando arquitectura limpia, buenas prácticas y una mirada atenta a la experiencia de las personas.",
+    "longBio": "Tengo experiencia con Node.js, NestJS, React, TypeScript, Next.js, PHP, Symfony y bases de datos PostgreSQL y MongoDB. Me gusta convertir problemas complejos en soluciones claras, colaborar en equipos ágiles y usar la tecnología con intención.",
+    "aiPractice": "Integro herramientas de inteligencia artificial en mi flujo de desarrollo para investigar, acelerar tareas repetitivas, explorar alternativas y revisar la calidad de mis soluciones. Las uso como apoyo a mi criterio técnico, manteniendo la responsabilidad sobre cada decisión y resultado.",
+    "social": {
+      "github": "https://github.com/CarlosCalderonDev",
+      "linkedin": "https://www.linkedin.com/in/carloscalderondev/"
+    }
+  },
+  "skills": [
+    { "label": "Frontend", "items": ["React", "TypeScript", "Next.js", "HTML5", "CSS"] },
+    { "label": "Backend", "items": ["Node.js", "NestJS", "PHP", "Symfony", "Django"] },
+    { "label": "Datos y calidad", "items": ["PostgreSQL", "MongoDB", "Prisma", "TypeORM", "Testing"] },
+    { "label": "Entorno", "items": ["Docker", "Linux", "Git", "Python", "Bash"] }
+  ],
+  "experience": [
+    {
+      "period": "Oct 2025 — actualidad",
+      "role": "Desarrollador Web",
+      "company": "Pacific Health Solutions",
+      "description": "Desarrollo y mantenimiento de aplicaciones web escalables con PHP, JavaScript, PostgreSQL y Symfony. También trabajo en integraciones REST/SOAP y almacenamiento S3 sobre DigitalOcean, dentro de equipos ágiles.",
+      "tags": ["PHP", "Symfony", "PostgreSQL", "S3"]
+    },
+    {
+      "period": "Ago 2022 — Sep 2026",
+      "role": "Desarrollador Web independiente",
+      "company": "Proyectos propios y colaborativos",
+      "description": "Creación de aplicaciones web con arquitectura limpia, módulos backend en Node.js y NestJS, interfaces en React y TypeScript, y bases de datos PostgreSQL y MongoDB.",
+      "tags": ["Node.js", "NestJS", "React", "Docker"]
+    },
+    {
+      "period": "Mar 2022 — Jul 2022",
+      "role": "Desarrollador Web Junior",
+      "company": "Prácticas universitarias",
+      "description": "Desarrollo y documentación de APIs RESTful, integración frontend-backend y optimización de consultas SQL en equipos con flujo GitFlow.",
+      "tags": ["Python", "Django", "Next.js", "SQL"]
+    }
+  ],
+  "projects": [
+    {
+      "number": "01",
+      "title": "Portfolio personal",
+      "description": "Una página rápida y accesible construida con Astro, TypeScript y contenido desacoplado en JSON.",
+      "stack": ["Astro", "TypeScript", "JSON"],
+      "link": "https://github.com/CarlosCalderonDev"
+    },
+    {
+      "number": "02",
+      "title": "Servicios web escalables",
+      "description": "Diseño de APIs y módulos de negocio con Node.js, NestJS y PostgreSQL, aplicando principios SOLID y arquitectura limpia.",
+      "stack": ["Node.js", "NestJS", "PostgreSQL"],
+      "link": "https://github.com/CarlosCalderonDev"
+    },
+    {
+      "number": "03",
+      "title": "Interfaces que explican",
+      "description": "Construcción de experiencias frontend con React y TypeScript, conectadas a servicios reales y pensadas para crecer.",
+      "stack": ["React", "TypeScript", "Next.js"],
+      "link": "https://github.com/CarlosCalderonDev"
+    }
+  ],
+  "education": "B.Sc. Ingeniería de Sistemas · Universidad Santiago de Cali · 2024",
+  "certifications": ["Rust Básico · Platzi · 2025", "Backend con Rust · Platzi · 2025", "Frontend Developer · Platzi · 2025", "Profesional de Git y GitHub · Platzi · 2022"]
+}
